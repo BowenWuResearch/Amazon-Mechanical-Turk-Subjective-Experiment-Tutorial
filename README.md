@@ -1,5 +1,5 @@
 # Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial
-Procedures on how a subjective experiment should be conducted using Amazon Mechanical Turk.
+How a subjective experiment should be conducted using Amazon Mechanical Turk.
 
 ## Abbriviations
 AWS -- [Amazon Web Services](https://aws.amazon.com)\
