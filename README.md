@@ -2,10 +2,10 @@
 How a subjective experiment should be conducted using Amazon Mechanical Turk.
 
 ## Abbriviations
-AWS -- [Amazon Web Services](https://aws.amazon.com)\
-AMT -- [Amazon Mechanical Turk](https://www.mturk.com)\
-HTML -- [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML) for website coding\
-AS3 -- [Amazon S3](https://aws.amazon.com/s3/)\
+AWS         -- [Amazon Web Services](https://aws.amazon.com)\
+AMT         -- [Amazon Mechanical Turk](https://www.mturk.com)\
+HTML        -- [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML) for website coding\
+AS3         -- [Amazon S3](https://aws.amazon.com/s3/)\
 AMT-Sandbox -- [AMT Sandbox](https://requester.mturk.com/developer/sandbox)
 
 ## Requirements
