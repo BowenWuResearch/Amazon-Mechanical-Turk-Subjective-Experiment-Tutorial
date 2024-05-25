@@ -14,7 +14,7 @@
 - Very basic knowledge of HTML for website coding
 
 ## Overview
-This tutorial begins with nothing to the publishing of a experiment in AMT.
+This tutorial begins with nothing to the end of publishing of a experiment in AMT.
 We will start from the creation of an AWS account, using which an AMT project will be created.
 In the project, a website is used as the interface to the participant, which one can edit using HTML to fit specific experimental purposes, such as adding questions or media stored using AS3.
 We will also cover the usage of AS3.
