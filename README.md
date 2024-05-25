@@ -16,8 +16,9 @@
 ## Overview
 This tutorial begins with nothing to the end of publishing of a experiment in AMT.
 We will start from the creation of an AWS account, using which an AMT project will be created.
-In the project, a website is used as the interface to the participant, which one can edit using HTML to fit specific experimental purposes, such as adding questions or media stored using AS3.
-We will also cover the usage of AS3.
+In the project, a webpage is used as the interface to the participant.
+One can edit the webpage using HTML to fit specific experimental purposes, such as adding questions or media.
+We assume that the media will be stored in AS3, for which the usage will also be described.
 To make sure everything is intended, or for a preliminary study, one can test the experiment using AMT-Sandbox. 
 Finally, the experiment can be published through AMT, and we can wait for the responses.
 
