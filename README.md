@@ -1,6 +1,3 @@
-# Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial
-How a subjective experiment should be conducted using Amazon Mechanical Turk.
-
 ## Abbreviations
 | Abbr. | Full name |
 | --- | --- |
@@ -11,8 +8,10 @@ How a subjective experiment should be conducted using Amazon Mechanical Turk.
 | AMT-Sandbox | [AMT Sandbox](https://requester.mturk.com/developer/sandbox) |
 
 ## Requirements
-- An email address.
-- Very basic knowledge of HTML for website coding.
+- An email address
+- Phone number
+- A credit/debit card, though you will not be charged
+- Very basic knowledge of HTML for website coding
 
 ## Overview
 This tutorial begins with nothing but an email address, to the publishing of a experiment in AMT.
@@ -23,11 +22,20 @@ To make sure everything is intended, or for a preliminary study, one can test th
 Finally, the experiment can be published through AMT, and we can wait for the responses.
 
 ## Table of Contents
-- [Create AWS Account](##Create-AWS-Account)
+- [Creation of AWS Account](##Creation-of-AWS-Account)
 
-## Create AWS Account
+## Creation of AWS Account
 You probably will not need to use your own account. The lab will provide an official account for you because they will pay the fee. However, there maybe a need for testing the experiment using AMT-Sandbox, in which case you may still need to use your own account. The following procedure shows how you can create an AWS account using an existing email address.
 
-1. 
-<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/02ada1b4-7921-4161-a85e-cb2e5f33fcc8">
+1. Navigate to [AWS](https://aws.amazon.com) and click on `Sign In to the Console`.
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/dbaa7215-cd9f-4cae-8174-69b7f132e934">
+
+2. Click on `Create a new AWS account`.
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/32582e48-f0f9-43fa-ab4b-5d6adf6b105a">
+
+3. Input email address and account name whatever you want, and follow their instructions to complete the sign up, which requires password, contact information, a credit/debit card, and a phone number. Finally, choose the `Basic support - Free` to omplete.
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/b80033d6-5333-4ad0-866e-3b4b38c15555">
+
+
+
 
