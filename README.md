@@ -2,10 +2,10 @@
 How a subjective experiment should be conducted using Amazon Mechanical Turk.
 
 ## Abbriviations
-AWS         -- [Amazon Web Services](https://aws.amazon.com)\
-AMT         -- [Amazon Mechanical Turk](https://www.mturk.com)\
-HTML        -- [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML) for website coding\
-AS3         -- [Amazon S3](https://aws.amazon.com/s3/)\
+AWS -- [Amazon Web Services](https://aws.amazon.com)\
+AMT -- [Amazon Mechanical Turk](https://www.mturk.com)\
+HTML -- [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML) for website coding\
+AS3 -- [Amazon S3](https://aws.amazon.com/s3/)\
 AMT-Sandbox -- [AMT Sandbox](https://requester.mturk.com/developer/sandbox)
 
 ## Requirements
@@ -15,3 +15,6 @@ AMT-Sandbox -- [AMT Sandbox](https://requester.mturk.com/developer/sandbox)
 
 ## Overview
 You will use your AWS account to create an AMT project, where you will edit a website in HTML to fit your experimental purposes, such as adding questions or media. To make sure everything is intended, or for a preliminary study, you will test your experiment using AMT-Sandbox. Then you can publish your experiment through AMT and wait for the responses.
+
+## Create AWS Account
+You probably will not need to use your own account. The lab will provide an official account for you because they will pay the fee. However, there maybe a need to test the experiment using AMT-Sandbox, where you may still need to use your own account. The following procedure shows how you can create an AWS account using an existing email address. 
