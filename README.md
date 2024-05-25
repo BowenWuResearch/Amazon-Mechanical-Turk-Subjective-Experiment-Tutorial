@@ -9,7 +9,7 @@
 
 ## Requirements
 - An email address
-- Phone number
+- A phone number
 - A credit/debit card, though you will not be charged
 - Very basic knowledge of HTML for website coding
 
