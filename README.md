@@ -63,6 +63,9 @@ The following shows the procedure:
 
 6. Click on accept and you can complete the HITs.
 
+7. Go back to the requester sandbox to check the results.
+<img width="800" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/ba60631d-9dfc-4daa-9546-a2520df429bb">
+
 Notes:
 - It seems that one AWS account can only accept the HIT once. In order to test it multiple times, prepare multiple AWS accounts in advance.
 
