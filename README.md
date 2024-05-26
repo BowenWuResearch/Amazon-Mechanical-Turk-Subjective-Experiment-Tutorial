@@ -24,11 +24,10 @@ To test whether everything is correct, or to conduct a preliminary study, AMT-Sa
 Finally, the experiment (HITs) can be published through AMT, and we can wait for the responses.
 
 ## Table of Contents
-- [Creation of AWS Account](##Creation-of-AWS-Account)
-- [Test on AMT Sandbox](##Test-on-AMT-Sandbox)
+- [Creation of AWS Account](#Creation-of-AWS-Account)
+- [Test on AMT Sandbox](#Test-on-AMT-Sandbox)
 
 ## Creation of AWS Account
-<a id="Creation-of-AWS-Account"></a>
 You probably will not need to use your own account. 
 The lab will provide an official account for you because they will pay the fee. 
 However, it is better for testing the experiment using AMT-Sandbox, in which case you still need to use your own account. 
@@ -43,7 +42,6 @@ The following procedure shows how you can create an AWS account using an existin
 3. Input email address and account name whatever you want, and follow their instructions to complete the sign up, which requires password, contact information, a credit/debit card, and a phone number. Finally, choose the `Basic support - Free` to complete.
 
 ## Test on AMT-Sandbox
-<a id="Test-on-AMT-Sandbox"></a>
 AMT-Sandbox is free to test the experiment.
 It will not charge the requester who published batches, and it will not pay the workers who have completed any HITs.
 Login as requester through the AMT-Sandbox to pubulish batches of HITs, login as worker to complete any published HITs.
