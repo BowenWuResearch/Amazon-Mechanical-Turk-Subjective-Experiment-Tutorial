@@ -53,7 +53,7 @@ The following shows the procedure:
 2. After login, check if this is the sandbox. A banner will be on the top of the page as an indication.
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/d9fb9202-30b0-4113-8226-18bb42ca7986">
 
-3. Create new project and publish a batch. Remeber to choose a unique name so that it can be easily distinguished from other HITs for us to search. This part will be detailed in the future.
+3. Create new project and publish a batch. Choose a unique title so that it can be easily distinguished from other HITs for us to search. This part will be detailed in the future.
 
 4. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. This will be a banner on the top of the page to indicate this is the sandbox.
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/f89ee4ad-5f76-4d50-af9b-4657b97a97bd">
