@@ -47,6 +47,7 @@ It will not charge the requester who published batches, and it will not pay the 
 Login as requester through the AMT-Sandbox to pubulish batches of HITs, login as worker to complete any published HITs.
 The following shows the procedure:
 
+### Creation of AMT-Sandbox Project
 1. Navigate to [AMT-Sandbox for requester](https://requester.mturk.com/developer/sandbox) and click on `Requester Sandbox`. Sign in using your AWS account. If this is the first time you use AMT, you will be required to choose a display name and your email. Input them and proceed.
 <img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/3c4c0a08-6760-437c-8b1b-c3ca75f09f98">
 
@@ -55,7 +56,7 @@ The following shows the procedure:
 
 3. Create new project and publish a batch. Choose a unique title so that it can be easily distinguished from other HITs for us to search. This part will be detailed in the future.
 
-4. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. This will be a banner on the top of the page to indicate this is the sandbox.
+4. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. There should be a banner on the top of the page to indicate this is the sandbox.
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/f89ee4ad-5f76-4d50-af9b-4657b97a97bd">
 
 5. Search for your published HITs.
