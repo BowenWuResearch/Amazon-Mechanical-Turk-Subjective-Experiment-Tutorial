@@ -122,7 +122,7 @@ While it has four attributes, the `src` variable is crucial for loading images.
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/2084a2fa-fcbd-485c-b32e-73b6f5456b8b">
 
 When publishing a batch of assignments, a csv file is required.
-In our case, the csv file contains a header called `image_url` followed by rows of urls of images, which looks like this:
+In our case, the csv file contains a header called `image_url` followed by rows of urls of image, which looks like this:
 | image_url |
 | --- |
 | url of image 1 |
