@@ -172,7 +172,7 @@ If everything is alright, click finish.
 #### Prepare csv file
 The format of the required csv file has been described in [Design Layout](#Design-Layout), [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. Or you can make your own one.
 
-#### Publish of Assignments
+#### Publish Assignments
 After the csv file is prepared, click on `Publish Batch`.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/50317095-3e1e-4556-ba50-1757a5f964f5">
