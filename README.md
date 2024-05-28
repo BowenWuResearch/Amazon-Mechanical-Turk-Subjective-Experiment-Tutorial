@@ -3,7 +3,7 @@
 | --- | --- |
 | AWS | [Amazon Web Services](https://aws.amazon.com) |
 | AMT | [Amazon Mechanical Turk](https://www.mturk.com) |
-| HIT | [Human Intelligent Task](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd), a work published on AMT.
+| HIT | [Human Intelligent Task](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd), a work published on AMT
 | HTML | [HyperText Markup Language](https://en.wikipedia.org/wiki/HTML) |
 | AS3 | [Amazon S3](https://aws.amazon.com/s3/) |
 | AMT-Sandbox | [AMT Sandbox](https://requester.mturk.com/developer/sandbox) |
