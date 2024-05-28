@@ -23,13 +23,12 @@ Finally, the experiment can be published through AMT, and we can wait for the re
 | AS3 | [Amazon S3](https://aws.amazon.com/s3/) |
 | Sandbox | [AMT Sandbox](https://requester.mturk.com/developer/sandbox) |
 
-
-
 ## Table of Contents
 - [Preliminaries](#Preliminaries)
 - [Creation of AWS Account](#Creation-of-AWS-Account)
 - [Test in Sandbox](#Test-in-Sandbox)
-
+- [Publishing Experiment in AMT](#Publishing-Experiment-in-AMT)
+- [Notes on Preparing Materials](#Notes-on-Preparing-Materials)
 
 ## Preliminaries
 ### What is HIT and Assignment?
@@ -218,20 +217,71 @@ Immediately, the page should be redirected to batch details, where you can check
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/51669560-5347-443e-abe6-da87f9a3d862">
 
-### Complete Sandbox Assignment
-1. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. There should be a banner on the top of the page to indicate this is the sandbox.
+### Complete Published Assignments
+#### Login as Sandbox Worker
+Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your Amazon account.
+
+In order to be a worker, an Amazon account for AMT worker needs to be registered.
+If you failed to login, create your Amazon account first.
+You can use the email used to create the AWS account.
+
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/47af8313-d705-4ff9-94cf-c4718633dbe1">
+
+There should be a banner on the top of the page to indicate this is the sandbox.
+If there is no one, navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/).
+
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/f89ee4ad-5f76-4d50-af9b-4657b97a97bd">
 
-2. Search for your published HITs.
-<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/374575d8-d105-42ec-84a6-3dea48433417">
+In Worker Registeration, input necessary information and click on `Create Account`.
 
-3. Click on accept and you can complete the HITs.
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/0c476d5a-f171-4908-be4f-fb9e601b55b8">
 
-Notes:
-- It seems that one AWS account can only accept the HIT once. In order to test it multiple times, prepare multiple AWS accounts in advance.
+#### Browsing Published Assignments
+Because we want to complete the assingment published by ourself, we can search for it by inputting the title. In our case, it would be `WuBowen-20240528-1553`. The search results are shown below.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/15573b46-64f6-4a96-8cd8-0d512ff020ce">
+
+
+#### Complete the Assignment
+Click on `Accept & Work` on the right of the assignment to proceed.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/44c89d8f-9437-45ad-8407-1e654272c2cb">
+
+Then you can submit your answer to complete the assignment.
+Select one category and submit the answer.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/d580233a-126d-405d-ba2f-4f4c605da0bf">
+
+#### Notes
+- It seems that one AWS account can only accept the HIT once. In order to complete multiple assignments, prepare multiple AMT worker accounts in advance.
 
 ### Examine Restuls
 Now we can go back to the requester sandbox to check the results.
-<img width="800" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/ba60631d-9dfc-4daa-9546-a2520df429bb">
 
+Login as requester, navigate to `Manage` tag, the published batch will be there.
+Click on `Review Results` to view the results.
 
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/bc7514b3-edfe-4936-8d85-cf560c2ee25e">
+
+The table shows all the received responses that have not been approved or rejected.
+The results can be downloaded as csv and used for data analysis.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/740e205f-0aab-4a1b-8513-ba4b1754fab1">
+
+In real AMT experiment, you can check the response of each worker, and decide to approve or reject their response. 
+This is necessary as there will be bots or people that give random answers which can bias the results. 
+
+By approving HITs, you give permission to reward the worker.
+If you reject them, they will not be paid, and AMT will automatically publish a new assignment.
+
+By downloading the csv, and mark "x" under a column titled "Approve" or putting your reject comment under a column title "Reject", you can do this offline.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/8cbbe96d-63c4-401f-a159-2fc4395d6839">
+
+Afterwards, you can upload this edited csv to AMT for this purpose.
+
+<img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e544678f-b832-44cf-8f95-503d7b9973c6">
+
+## Publishing Experiment in AMT
+
+## Notes on Preparing Materials
