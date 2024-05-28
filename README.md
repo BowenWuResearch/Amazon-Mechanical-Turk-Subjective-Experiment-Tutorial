@@ -56,18 +56,20 @@ The following shows the procedure:
 
 3. Create new project and publish a batch. Choose a unique title so that it can be easily distinguished from other HITs for us to search. This part will be detailed in the future.
 
-4. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. There should be a banner on the top of the page to indicate this is the sandbox.
+### Working on Created Project
+1. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. There should be a banner on the top of the page to indicate this is the sandbox.
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/f89ee4ad-5f76-4d50-af9b-4657b97a97bd">
 
-5. Search for your published HITs.
+2. Search for your published HITs.
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/374575d8-d105-42ec-84a6-3dea48433417">
 
-6. Click on accept and you can complete the HITs.
-
-7. Go back to the requester sandbox to check the results.
-<img width="800" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/ba60631d-9dfc-4daa-9546-a2520df429bb">
+3. Click on accept and you can complete the HITs.
 
 Notes:
 - It seems that one AWS account can only accept the HIT once. In order to test it multiple times, prepare multiple AWS accounts in advance.
+
+### Examine Restuls
+Now we can go back to the requester sandbox to check the results.
+<img width="800" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/ba60631d-9dfc-4daa-9546-a2520df429bb">
 
 
