@@ -255,7 +255,7 @@ Select one category and submit the answer.
 #### Notes
 - It seems that one AWS account can only accept the HIT once. In order to complete multiple assignments, prepare multiple AMT worker accounts in advance.
 
-### Examine Restuls
+### Examine Results
 Now we can go back to the requester sandbox to check the results.
 
 Login as requester, navigate to `Manage` tag, the published batch will be there.
