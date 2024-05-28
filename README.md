@@ -148,7 +148,7 @@ When finised, click on the `Preview` to proceed to the next step.
 
 #### Preview
 In the preview page, we can check if the page is rendered as intended.
-Ignore the warning `Failed to load the image` because we have not provide images for it.
+Ignore the warning `Failed to load the image` because we have not provided images for it.
 
 You can click on the page to test each functionality.
 For example, cliking on instruction will show a window of instruction.
@@ -170,9 +170,10 @@ If everything is alright, click finish.
 
 ### Publish Batch of Assignments
 #### Prepare csv file
-The format of the required csv file has been described in [Design Layout](#Design-Layout), below is a template csv file I created for demonstration purpose. Download it [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) and check its content to get a sense. Or you can make your own one.
+The format of the required csv file has been described in [Design Layout](#Design-Layout), [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. Or you can make your own one.
 
-Click on `Publish Batch`.
+#### Publish of Assignments
+After the csv file is prepared, click on `Publish Batch`.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/50317095-3e1e-4556-ba50-1757a5f964f5">
 
