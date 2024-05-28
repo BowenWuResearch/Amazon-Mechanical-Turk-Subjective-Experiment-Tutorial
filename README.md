@@ -269,7 +269,7 @@ The results can be downloaded as csv and used for data analysis.
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/740e205f-0aab-4a1b-8513-ba4b1754fab1">
 
 In real AMT experiment, you can check the response of each worker, and decide to approve or reject their response. 
-This is necessary as there will be bots or people that give random answers which can bias the results. 
+This is necessary as there will be bots or people that give low-quality answers which can bias the results. 
 
 By approving HITs, you give permission to reward the worker.
 If you reject them, they will not be paid, and AMT will automatically publish a new assignment.
