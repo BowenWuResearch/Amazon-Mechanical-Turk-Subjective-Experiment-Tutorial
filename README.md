@@ -114,7 +114,7 @@ You can edit the content for you specific purpose.
 
 One thing that requires attention is how to load images in to this HTML.
 In the following figure, there is a tag called `crowd-image-classifier` in the red box.
-While it has four attributes, the `src` one is crucial for loading images.
+While it has four attributes, the `src` variable is crucial for loading images.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/2084a2fa-fcbd-485c-b32e-73b6f5456b8b">
 
@@ -127,7 +127,7 @@ In our case, the csv file contains a header called `image_url` followed by rows 
 | url of image 3 |
 
 In one assignment, each row in the csv will be iteratively loaded and processed, resulting in 3 HITs.
-In each HIT, the value defined in `src` determines where to find the url.
+In each HIT, the value of `src` defines where to find the url.
 In our example, `src="${image_url}"` means that it will take the values under the column `image_url`, with which the value of `src` will be filled.
 As a result, the `src` will contain one of the urls of image in the csv file.
 This tells the `crowd-image-classifier` which image to load for the classification.
@@ -138,9 +138,29 @@ In that case, refer to their values using their column names by `${column_name}`
 
 For advance usage, you can browse other project templates and read the comments in it.
 
-When finised, click on the `Preview` at the right left corner to proceed to the next step.
+When finised, click on the `Preview` to proceed to the next step.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e3b05af2-e058-423f-ac45-610406635bb6">
 
 #### Preview
+In the preview page, we can check if the page is rendered as intended.
+Ignore the warning `Failed to load the image` because we have not provide images for it.
+
+You can click on the page to test each functionality.
+For example, cliking on instruction will show a window of instruction.
+These are connected to HTML elements in the source code.
+You can go back and modify the code if anything goes wrong.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/02b79811-f736-464b-8e3a-5250023e4a05">
+
+One thing should be noted is that you can actually submit an answer in this preview and see what results you can get.
+Just select one option and click on the submit at the bottom right.
+
+<img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/5e5b613e-6f4f-417a-8aaa-9117f7d2d99a">
+
+Your answer will be shown on the top of the page.
+
+<img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/340af974-dede-4806-a198-2751ae8aedab">
 
 ### Publish Batch of Assignments
 
