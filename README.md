@@ -64,7 +64,6 @@ The following procedure shows how you can create an AWS account using an existin
 Sandbox is free to test the experiment.
 It will not charge the requester who published batches, and it will not pay the workers for completing any HITs.
 Login as requester through the AMT-Sandbox to pubulish batches of HITs, login as worker to complete any published HITs.
-The following shows the procedure:
 
 ### Login as Requester
 Navigate to [AMT-Sandbox for requester](https://requester.mturk.com/developer/sandbox) and click on `Requester Sandbox`. 
@@ -103,10 +102,15 @@ You will have to enter the following for a project:
 - `Reward per assignment` is the amount you will pay for each assignment. We set to 0.0 because this is only for test.
 - `Number of assignments per task` is how many participants you want to gather. We will set to 1 for testing. If you want to conduct preliminary experiment, input any number you want.
 - `Time allotted per assignment` is the time limitation for completing one assignment.
+- `Task expires in` is the duration of how long your task will last on Sandbox.
+- `Auto-approve and pay Workers in` means if you do not prove or reject a HIT for a period of time, the HIT will be automatically approved and the reward will be given to the worker who has completed this HIT. This will not happen in the Sandbox.
+- `Require that Workers be Masters to do your tasks`. AMT maintains a list of wokers who show high performance. Check to only allow Masters to complete your task. Although this is likely to improve the quality of the responses, more completion time is generally expected. Do not check Yes in Sandbox because you will not be able to test it using your non-Master account.
+- `Specify any additional qualifications Workers must meet to work on your tasks` provides creterions to filter out workers for specific need. For example, sometimes we want our participants to be located in some contries. In our case, we can set the region of workers to  Japan.
+- `Task Visibility`. I do not really understanding the purpose of this option. Usually keep it `Public` will suffice.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/dc63fd7b-3a0d-4aa9-9c0f-541253fa5da4">
 
 Finally, we can proceed to design the layout.
-
-<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/2651fcf3-9b95-4c77-8eea-d271fa9a6fa5">
 
 #### Design Layout
 You will be presented by HTML codes, which defines the interface of the experiment.
@@ -162,8 +166,56 @@ Your answer will be shown on the top of the page.
 
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/340af974-dede-4806-a198-2751ae8aedab">
 
-### Publish Batch of Assignments
+If everything is alright, click finish.
 
+### Publish Batch of Assignments
+#### Prepare csv file
+The format of the required csv file has been described in [Design Layout](#Design-Layout), below is a template csv file I created for demonstration purpose. Download it [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) and check its content to get a sense. Or you can make your own one.
+
+Click on `Publish Batch`.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/50317095-3e1e-4556-ba50-1757a5f964f5">
+
+Choose a csv file.
+
+<img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1fe90bf4-f994-4aa3-bade-22556e6cc8a6">
+
+Upload the file.
+
+<img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e6729cb6-5bae-4ec8-8d83-a220230c76d3">
+
+Sandbox allows you to preview the task before actually publishing it.
+Below shows some elements you may want to check:
+- Left upper corner shows the title.
+- `Reward` shows the reward to workers completed the assignment.
+- `Tasks Available` shows how many assignments are there for this experiment.
+- `Duration` shows the time limitation for completing the assignment.
+- `Showing Task 1 of 3` shows how many HITs are there in one assignment.
+- `Next HIT` in our case is used to go to next image, i.e., the next row in the uploaded csv file.
+- `Qualifications Required`. The criterion we have set.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/4d9656e0-ff20-4b34-8deb-f9d25479cb1b">
+
+Check information of the batch.
+You can change the `Batch Name` for management of your batches.
+
+I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
+`Number of tasks in this batch` should refer to how many HITs are there in each assignment, in our case it is 3.
+`Number of assignments per task` should refer to the total number of assignments, because `task` here refers to HIT. In our case it is 1.
+As a result, `Total number of assignments in this batch` should be the total number of HITs.
+
+The `Cost Summary` can be ignored since we are in Sandbox.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1a3bf401-8fc2-4c5e-9bee-486430fe5432">
+
+Click on `Publish` to publish the assignments.
+
+Immediately, the page should be redirected to batch details, where you can check status of the batch, and view the results.
+- `Assignments Completed` shows the progress.
+- `Cancel` can terminate the publishing of assignments. However, assignments that have been already accepted by workers will not be terminated.
+- `Results` is where we can check the received responses of workers.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/51669560-5347-443e-abe6-da87f9a3d862">
 
 ### Complete Sandbox Assignment
 1. Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your AWS account. There should be a banner on the top of the page to indicate this is the sandbox.
