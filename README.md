@@ -197,7 +197,7 @@ Below shows some elements you may want to check:
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/4d9656e0-ff20-4b34-8deb-f9d25479cb1b">
 
-Check information of the batch.
+Check the information of the batch.
 You can change the `Batch Name` for management of your batches.
 
 I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
