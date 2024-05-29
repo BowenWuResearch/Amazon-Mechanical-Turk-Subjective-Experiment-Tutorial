@@ -188,7 +188,7 @@ Your answer will be shown on the top of the page.
 If everything is alright, click finish.
 
 ### Publish Assignments
-#### Prepare csv file
+#### Prepare Csv File
 The format of the required csv file has been described in [Design Layout](#Design-Layout).
 [Here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose.
 You can download it and check its content to get a sense, or you can also make your own csv file.
@@ -228,7 +228,7 @@ The `Cost Summary` can be ignored since we are in Sandbox.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1a3bf401-8fc2-4c5e-9bee-486430fe5432">
 
-I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
+I feel like more explanation is needed for `Tasks` as the description is not so comprehensive.
 `Number of tasks in this batch` refer to how many assignments are there that one worker can accept and complete, in our case it is 3.
 `Number of assignments per task` refer to the number of assignments we publish for each HIT, in our case it is 1.
 As a result, `Total number of assignments in this batch` is the total number of assignments, in our case `3 (assignments for one worker) * 1 (number of assignment per HIT) = 3`.
@@ -246,7 +246,7 @@ Immediately, the page should be redirected to batch details, where you can check
 #### Login as Sandbox Worker
 Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your Amazon account.
 
-In order to be a worker, an Amazon account for AMT worker needs to be registered.
+In order to accept and complete an assignment, an Amazon account for AMT worker needs to be registered.
 Create your Amazon account first if you do not have one.
 You can use the email used to create the AWS account for the registeration.
 
@@ -278,8 +278,8 @@ Select one category and submit the answer.
 If there are multiple HITs, you need to accept each of them before complete it.
 Checking the `Auto-accept next HIT` can improve the efficiency.
 
-#### Notes
-- It seems that one AWS account can only accept the HIT once. In order to complete multiple assignments, prepare multiple AMT worker accounts in advance.
+Note that one Amazon account can only accept the one set of HITs. 
+In order to complete multiple set of HITs, prepare multiple accounts in advance.
 
 ### Examine Results
 Now we can go back to the requester Sandbox to check the results.
@@ -295,10 +295,10 @@ The results can be downloaded as csv and used for data analysis.
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/740e205f-0aab-4a1b-8513-ba4b1754fab1">
 
 In real AMT experiment, you can check the response of each worker, and decide to approve or reject their response. 
-This is necessary as there will be bots or people that give low-quality answers which can bias the results. 
+This is necessary as there will be bots or people that give low-quality responses which can bias the result. 
 
-By approving HITs, you give permission to reward the worker.
-If you reject them, they will not be paid, and AMT will automatically publish a new assignment.
+By approving a response, you give permission to reward the worker.
+If you reject, the workder will not be paid, and AMT will automatically publish a new assignment for that HIT.
 
 By downloading the csv, and mark "x" under a column titled "Approve" or putting your reject comment under  a column title "Reject", you can do this offline.
 
@@ -316,21 +316,27 @@ Other minor changes are as follows:
 - **Title**. Different from Sandbox, the title should be informative about the task that the particpants will do in the experiment to gather relative workers more efficiently. For example, if the task is the image classification, the title could be: Picking the best category for images.
 
 ### Reward, Number of Assignments, and Cost Summary
-Let us understand the meaning of these words first.
+Let us clarify the meaning of these words first.
 `Reward` refers to `Reward per Assignment` in the `Enter Properties` section.
-The `Assignment` in `Reward per Assignment` is actually referring to a `HIT`, instead of the whole experiment which contains multiple HITs.
-Therefore, this is how much you will pay the workers for completing one **HIT**.
+The `per Assignment` in `Reward per Assignment` is equal to `per HIT`.
+Therefore, this is how much you will pay the workers for completing **one HIT**.
+For example in our image classification experiment, if we set the reward to $5, workers will receive $5 for classifying **one image**.
+For demonstration, we will set the `Number of assignments per task` to 100, which means we want to gather 100 responses for each HIT.
 
-<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/4608db25-c552-47e6-accb-e52223e91805">
+<img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/781874de-8ef5-4bfc-acc4-25442a016d5a">
 
-We will set the `Number of assignments per task` to 100 for demonstration, which means we want to gather 100 responses for each HIT. Recall that we have 3 images to classify for each assignment.
+Recall that we have 3 images to classify (3 HITs), the total number of assignments would be `3x100=300`. 
+In the confirmation page (as shown below) before publishing the batch, the `Total number of assignments in this batch` should be 300.
+The `Estimated Total Reward` would be the `Reward per Assignment` times the total number of assignments, which is `$5x300=$1500`.
+`Estimated Cost` shows the estimated total amount of money you will need to pay, including to the workers and to Amazon. 
 
-As you shall see in the confirmation page before publishing the batch, the `Total number of assignments in this batch` would be the total number of HITs, which in our case is .
-The `Estimated Total Reward` would be the `Reward per Assignment` times the total number of HITs.
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/7b94285b-ca9d-44e0-a9d8-32348afffba9">
 
-
-This shows the estimated amount of money you will need to pay, including to the workers and to Amazon. 
-
+#### Montly Limitation
+There is a warning on exceeding montly credit limit. 
+It is unclear what is the default limit, but if you want to increase it, contact customer service of AMT or Amazon. 
+I successfully raised my limit to $1000 before. 
+I will share how I achieved this in the future.
 
 ## AS3 as Data Storage
 
