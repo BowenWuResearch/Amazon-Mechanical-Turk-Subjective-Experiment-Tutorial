@@ -435,7 +435,7 @@ You will not be able to access to view the item because my bucket has already be
 
 You may have already noticed that the postfix of the url is the same as the structure of the folder we uploaded, which is `demo-folder/demo-folder-inside-1/demo-image-1.jpeg`.
 In fact, the url in AS3 preserves the directory structure in the uploaded folder.
-This is easy for creating the csv file when we have multiple files.
+This makes it easy for creating the csv file when we have multiple files.
 We can recursively obtain the full path to each file in the directory locally, and append them with the prefix of AS3 path, which in our case is `https://demonstration-20240529-1726.s3.ap-northeast-3.amazonaws.com/`.
 
 ## Notes on Preparing Materials
