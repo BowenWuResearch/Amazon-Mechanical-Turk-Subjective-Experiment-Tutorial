@@ -32,17 +32,23 @@ Finally, the experiment can be published through AMT, and we can wait for the re
 - [Notes on Preparing Materials](#Notes-on-Preparing-Materials)
 
 ## Preliminaries
-### What is HIT and Assignment?
-HIT and Assignment will be frequently used.
+### HIT and Assignment
+HIT and assignment are important concepts in AMT and will be frequently used throughout this tutorial.
 It is better to understanding their meaning in the context of AMT before proceeding.
 
-`HIT` refers to each task in a experiment.
-For example, if we are asking participants to classify images, the classification of **ONE** image will be a HIT.
+In general, a HIT refers to the task that the workers will complete.
+An assignemnt will be published onto AMT for workers to complete.
+Usually, we will publish one assignment for each HIT to obtain one response for each HIT, but sometimes we want to collect more than one response for each HIT.
+In this case, we can publish multiple assignments for each HIT to obtain multiple responses for each HIT.
+These assignments will be assigned to different workers to ensure the responses are from different sources (theoretically).
 
-`Assignment` refers to a experiment as a whole.
-For example, if the experiment has 10 images in total for one participant to classify, a completion of **ALL** 10 images will be an assignment.
-
-Therefore, if we publish 3 assignments, 3 particpants will take part in the experiment, each of them will classify all 10 images in one experiment. As a result, we will receive 30 HITs in total, 3 HITs for each image.
+As a concrete exmaple, assume we want to collect the category for a number of images, say 3 images.
+In this case, the classification of one image would be a HIT.
+In total, there will be 3 HITs in our experiment.
+If we want only one response for each image, we can publish only one assignment for each HIT.
+But if we want multiple responses, we can publish multiple assignments for each HIT.
+Therefore, if we publish 100 assignments for each HIT, the total number of assignments will be `3x100=300`.
+In total, we will receive `3x100=300` responses, including 100 reponses for each image.
 
 For more information on this topic, please refer to [here](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd).
 
@@ -98,7 +104,7 @@ Click on `Create` tag, and select Image Classifcation in Vision category, fianal
 
 You will have to enter the following for a project:
 - `Project Name` is the name for you project managemtnt. It will only be shown to you.
-- `Title` will be shown to all workers on AMT (Sandbox in this case). Choose a unique title, so that it can be easily distinguished from other assignments, for us to search afterwards. I usually use my name and the current date and time, e.g., WuBowen-20240528-1553. However, in the real experiment, the title should be descriptive of your task for gathering participants.
+- `Title` will be shown to all workers on AMT (Sandbox in this case). Choose a unique title, so that it can be easily distinguished from other assignments, for us to search afterwards. I usually use my name and the current date and time, e.g., WuBowen-20240528-1553. However, in the real experiment, the title should be informative of your task for gathering participants.
 - `Reward per assignment` is the amount you will pay for each assignment. We set to 0.0 because this is only for test.
 - `Number of assignments per task` is how many participants you want to gather. We will set to 1 for testing. If you want to conduct preliminary experiment, input any number you want.
 - `Time allotted per assignment` is the time limitation for completing one assignment.
@@ -263,7 +269,7 @@ Checking the `Auto-accept next HIT` can improve the efficiency.
 - It seems that one AWS account can only accept the HIT once. In order to complete multiple assignments, prepare multiple AMT worker accounts in advance.
 
 ### Examine Results
-Now we can go back to the requester sandbox to check the results.
+Now we can go back to the requester Sandbox to check the results.
 
 Login as requester, navigate to `Manage` tag, the published batch will be there.
 Click on `Review Results` to view the results.
@@ -290,6 +296,28 @@ Afterwards, you can upload this edited csv to AMT for this purpose.
 <img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e544678f-b832-44cf-8f95-503d7b9973c6">
 
 ## Publishing Experiment in AMT
+Basically, the same procedure described in [Creat Sandbox Project](#Creat-Sandbox-Project) and [Publish Batch of Assignments](#Publish-Batch-of-Assignments) can be followed, except the setting of [Reward, Number of Assignments, and Cost Summary](#Reward,-Number-of-Assignments,-and-Cost-Summary). 
+
+Other minor changes are as follows:
+- **Login portal**. We login to AMT instead of Sandbox from [here](https://requester.mturk.com/).
+- **Title**. Different from Sandbox, the title should be informative about the task that the particpants will do in the experiment to gather relative workers more efficiently. For example, if the task is the image classification, the title could be: Picking the best category for images.
+
+### Reward, Number of Assignments, and Cost Summary
+Let us understand the meaning of these words first.
+`Reward` refers to `Reward per Assignment` in the `Enter Properties` section.
+The `Assignment` in `Reward per Assignment` is actually referring to a `HIT`, instead of the whole experiment which contains multiple HITs.
+Therefore, this is how much you will pay the workers for completing one **HIT**.
+
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/4608db25-c552-47e6-accb-e52223e91805">
+
+We will set the `Number of assignments per task` to 100 for demonstration, which means we want to gather 100 responses for each HIT. Recall that we have 3 images to classify for each assignment.
+
+As you shall see in the confirmation page before publishing the batch, the `Total number of assignments in this batch` would be the total number of HITs, which in our case is .
+The `Estimated Total Reward` would be the `Reward per Assignment` times the total number of HITs.
+
+
+This shows the estimated amount of money you will need to pay, including to the workers and to Amazon. 
+
 
 ## AS3 as Data Storage
 
