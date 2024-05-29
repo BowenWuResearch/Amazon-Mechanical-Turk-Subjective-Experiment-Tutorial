@@ -339,5 +339,103 @@ I successfully raised my limit to $1000 before.
 I will share how I achieved this in the future.
 
 ## AS3 as Data Storage
+Every newly registered AWS customer can receive 5GB of AS3 storage [for free](https://aws.amazon.com/s3/pricing/?loc=ft#AWS_Free_Tier).
+This is a good place to store our data if the scale is not that large.
+The rest of this section show how to store your data in AS3 and obtain their url for the access from all over the world.
+While we only show a minimal example, you can change specific settings for you own purpose.
+
+### Login to AS3
+Navigate to [AS3](https://aws.amazon.com/s3/) and click on `Sign In to the Console` using your AWS account.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/0b24a7f7-4b2e-43ad-851b-f99053d42017">
+
+### Create Bucket
+On top of the page, search for S3 and click on `S3`.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/dcdb09bb-5936-467d-9865-c4127a0d76ef">
+
+Click on `Create a Bucket`.
+
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/4556febf-01ee-45dc-93b3-c7e3065b6864">
+
+Input a bucket name.
+The bucket name should be unique globally on the internet because we want to use its url.
+AS3 will check for this after your input.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/015924c9-a6f1-4cb2-90fa-964eb6640690">
+
+Change object ownership to `ACLs enabled` so that the content can be made public afterward.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/2958818a-28c1-483f-b8c5-f270d6a36675">
+
+Uncheck `Block all public access` to allow access from public.
+Check the consent below.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/8c0e1be3-3394-4ca9-93c1-7eba41d2e364">
+
+Go to the end and click on `Create bucket`.
+
+<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/bdd5d363-e21a-43c2-997d-380fd62a497f">
+
+### Upload Data
+Immediately, you should be redirected to the list of your buckets.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/eeee60c7-637c-4908-9bc7-65d466e9de04">
+
+Click on the bucket name to view the details of the bucket.
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/737ed80a-1192-4d6e-a8e9-5cbb1cf1597d">
+
+By clicking on the `Upload`, you can upload files.
+Add your files or folders.
+
+We will upload a folder called demo-folder, which has the following structure:
+```
+demo-folder
+|--demo-folder-inside-1
+|  |--demo-image-1.jpeg
+|  |--demo-image-2.jpeg
+|--demo-folder-inside-2
+   |--demo-image-1.jpeg
+   |--demo-image-2.jpeg
+```
+
+The page should look like this:
+
+<img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/6cc3db27-fff1-438c-bbb7-d1c0d3146b44">
+
+Click `Upload` to proceed.
+
+AS3 will show the results of uploading.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/47576cc1-9b19-49c6-aaed-a81477a6d652">
+
+Click `Close` on the right upper corner to go back to the bucket.
+
+### Make Public
+
+By default, these files are not public.
+Although there is a link for each file, it is not available to access.
+In order to make these files public, check the items and click on `Make public using ACL` in the drop down menue of `Actions`.
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/cbf8748b-d6d5-4fd9-afd0-efa83c2d7b26">
+
+Click on `Make public` in the next page.
+AS3 will show the results of making public.
+
+### Obtain Url
+
+Navigate to any uploaded file and click on the file name to view the object overview.
+The `Object URL` shows the url to access this specific object.
+You can use this link to prepare the csv file for publishing assignments described in [Prepare Csv File](#Prepare-Csv-File).
+
+<img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1e7ffa24-e1a9-4675-85e4-c6784d11ff96">
+
+This link to this item is: https://demonstration-20240529-1726.s3.ap-northeast-3.amazonaws.com/demo-folder/demo-folder-inside-1/demo-image-1.jpeg. You will not be able to click to view the item because my bucket has already been deleted.
+
+You may have already noticed that the postfix of the url is the same as the structure of the folder we uploaded, which is `demo-folder/demo-folder-inside-1/demo-image-1.jpeg`.
+In fact, the url in AS3 preserves the directory structure in the uploaded folder.
+This is easy for creating the csv file when we have multiple files.
+We can recursively obtain the full path to each file in the directory locally, and append them with the prefix of AS3 path, which in our case is `https://demonstration-20240529-1726.s3.ap-northeast-3.amazonaws.com/`.
 
 ## Notes on Preparing Materials
