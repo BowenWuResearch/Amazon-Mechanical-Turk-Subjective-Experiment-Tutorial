@@ -312,7 +312,7 @@ Afterwards, you can upload this edited csv to AMT for this purpose.
 Basically, the same procedure described in [Creat Sandbox Project](#Creat-Sandbox-Project) and [Publish Batch of Assignments](#Publish-Batch-of-Assignments) can be followed, except the setting of [Reward, Number of Assignments, and Cost Summary](#Reward,-Number-of-Assignments,-and-Cost-Summary). 
 
 Other minor changes are as follows:
-- **Login portal**. We login to AMT instead of Sandbox from [here](https://requester.mturk.com/).
+- **Login portal**. We login to [AMT](https://requester.mturk.com/) instead of Sandbox.
 - **Title**. Different from Sandbox, the title should be informative about the task that the particpants will do in the experiment to gather relative workers more efficiently. For example, if the task is the image classification, the title could be: Picking the best category for images.
 
 ### Reward, Number of Assignments, and Cost Summary
