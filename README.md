@@ -474,3 +474,9 @@ By clicking on it, the acceptance will be withdrawned, and the assignment will b
 In the first page, we should describe the content of the experiment, and notify the workers that we will collect their answer for data analysis.
 If you want to collect personal information such as age and gender, you should mention it clearly.
 If they do not agree, they can click on `return` to withdraw the acceptance.
+
+## Contact
+My email: wu.bowen.dp@gmail.com
+Feel free to open an issue for anything.
+
+
