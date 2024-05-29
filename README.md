@@ -448,7 +448,7 @@ For example, in image classification, instead of classifying only one image in o
 Therefore, if we have 100 images, 10 assignments would be sufficient rather than 100.
 This can significantly reduce the cost.
 
-However, this will results in less variation of workers.
+However, this will result in less variation of workers.
 While for a between-subject design this must not be done, it is necessary for within-subjective design.
 
 ### Including Attention Check Questions
