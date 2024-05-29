@@ -431,7 +431,7 @@ You can use this link to prepare the csv file for publishing assignments describ
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1e7ffa24-e1a9-4675-85e4-c6784d11ff96">
 
-This link to this item is: https://demonstration-20240529-1726.s3.ap-northeast-3.amazonaws.com/demo-folder/demo-folder-inside-1/demo-image-1.jpeg. You will not be able to click to view the item because my bucket has already been deleted.
+You will not be able to access to view the item because my bucket has already been deleted.
 
 You may have already noticed that the postfix of the url is the same as the structure of the folder we uploaded, which is `demo-folder/demo-folder-inside-1/demo-image-1.jpeg`.
 In fact, the url in AS3 preserves the directory structure in the uploaded folder.
