@@ -37,18 +37,18 @@ HIT and assignment are important concepts in AMT and will be frequently used thr
 It is better to understanding their meaning in the context of AMT before proceeding.
 
 In general, a HIT refers to the task that the workers will complete.
-An assignemnt will be published onto AMT for workers to complete.
+Assignemnt swill be published onto AMT for workers to complete.
 Usually, we will publish one assignment for each HIT to obtain one response for each HIT, but sometimes we want to collect more than one response for each HIT.
 In this case, we can publish multiple assignments for each HIT to obtain multiple responses for each HIT.
 These assignments will be assigned to different workers to ensure the responses are from different sources (theoretically).
 
-As a concrete exmaple, assume we want to collect the category for a number of images, say 3 images.
-In this case, the classification of one image would be a HIT.
-In total, there will be 3 HITs in our experiment.
+As a concrete exmaple, assume that we want to collect the category for a number of images, say 3 images.
+In this case, the classification of one image would be one HIT.
+In total, there will be 3 HITs.
 If we want only one response for each image, we can publish only one assignment for each HIT.
 But if we want multiple responses, we can publish multiple assignments for each HIT.
 Therefore, if we publish 100 assignments for each HIT, the total number of assignments will be `3x100=300`.
-In total, we will receive `3x100=300` responses, including 100 reponses for each image.
+We will receive `3x100=300` responses, including 100 reponses for each image.
 
 For more information on this topic, please refer to [here](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd).
 
