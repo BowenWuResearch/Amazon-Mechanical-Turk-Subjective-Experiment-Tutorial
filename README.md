@@ -53,8 +53,7 @@ We will receive `3x100=300` responses, including 100 reponses for each image.
 For more information on this topic, please refer to [here](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd).
 
 ## Creation of AWS Account
-You probably will not need to use your own account. 
-The lab will provide an official account for you because they will pay the fee. 
+You will not need to use your own account if the lab provides an official account for you because they will pay the fee.
 However, it is better for testing the experiment using Sandbox, in which case you still need to use your own account. 
 The following procedure shows how you can create an AWS account using an existing email address.
 
@@ -68,8 +67,16 @@ The following procedure shows how you can create an AWS account using an existin
 
 ## Test in Sandbox
 Sandbox is free to test the experiment.
-It will not charge the requester who published batches, and it will not pay the workers for completing any HITs.
-Login as requester through the AMT-Sandbox to pubulish batches of HITs, login as worker to complete any published HITs.
+It will not charge the requesters who publish assignments.
+Also, it will not pay the workers for completing any assignment.
+
+In a word, we login as requester to the Sandbox to create a project and pubulish assignments, and login as worker to complete our published assignments.
+
+The following shows how to achieve this:
+- [Login as Requester](#Login-as-Requester)
+- [Creat Sandbox Project](#Creat-Sandbox-Project)
+- [Publish Assignments](#Publish-Assignments)
+- [Complete Published Assignments](#Complete-Published-Assignments)
 
 ### Login as Requester
 Navigate to [AMT-Sandbox for requester](https://requester.mturk.com/developer/sandbox) and click on `Requester Sandbox`. 
@@ -92,44 +99,48 @@ A banner will be on the top of the page as an indication.
 
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/d9fb9202-30b0-4113-8226-18bb42ca7986">
 
-If you are not in the ATM-Sandbox, navigate to [AMT-Sandbox](https://requester.mturk.com/developer/sandbox) and sign in  using the account just created.
+If you are not in Sandbox, navigate to [AMT-Sandbox](https://requester.mturk.com/developer/sandbox) and sign in using the account just created.
 
 ### Creat Sandbox Project
-We will take Image Classification as an example to show how a Sandbox project can be created.
+We take the classification of a number of images as an example to show how a Sandbox project can be created.
+
+The reason is that usually we would have workers eavalute images, audios or videos, which need to be stored somewhere on the cloud and loaded to the assignment to be visible to workers, via a csv file containing the url of them.
+Therefore, it is necessary to explain how the csv file should look like.
+Image classification can be a minimal example to demonstrate how to achieve this.
+If your experiment does not contain anything that needs to be loaded from cloud sources, you do not need to provide the csv file. You can skip the part that concerns the csv file.
 
 #### Enter Properties
-Click on `Create` tag, and select Image Classifcation in Vision category, fianally click on `Create Project`.
+Click on `Create` tag, and select `Image Classifcation` in Vision category, fianally click on `Create Project`.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/7cf7097f-cf80-40f0-a8b4-0382f3c8eb8c">
 
-You will have to enter the following for a project:
+You will have to enter the following for creating a project:
 - `Project Name` is the name for you project managemtnt. It will only be shown to you.
 - `Title` will be shown to all workers on AMT (Sandbox in this case). Choose a unique title, so that it can be easily distinguished from other assignments, for us to search afterwards. I usually use my name and the current date and time, e.g., WuBowen-20240528-1553. However, in the real experiment, the title should be informative of your task for gathering participants.
 - `Reward per assignment` is the amount you will pay for each assignment. We set to 0.0 because this is only for test.
-- `Number of assignments per task` is how many participants you want to gather. We will set to 1 for testing. If you want to conduct preliminary experiment, input any number you want.
+- `Number of assignments per task` is how many responses you want for each HIT. We will set to 1 for testing.
 - `Time allotted per assignment` is the time limitation for completing one assignment.
-- `Task expires in` is the duration of how long your task will last on Sandbox.
-- `Auto-approve and pay Workers in` means if you do not prove or reject a HIT for a period of time, the HIT will be automatically approved and the reward will be given to the worker who has completed this HIT. This will not happen in the Sandbox.
+- `Task expires in` is the duration of how long your task will last for workers to see and accept.
+- `Auto-approve and pay Workers in` means if you do not approve or reject a response for a period of time, it will be automatically approved, so that the reward will be given to the worker who has completed this assignment. This will not happen in the Sandbox.
 - `Require that Workers be Masters to do your tasks`. AMT maintains a list of wokers who show high performance. Check to only allow Masters to complete your task. Although this is likely to improve the quality of the responses, more completion time is generally expected. Do not check Yes in Sandbox because you will not be able to test it using your non-Master account.
-- `Specify any additional qualifications Workers must meet to work on your tasks` provides creterions to filter out workers for specific need. For example, sometimes we want our participants to be located in some contries. In our case, we can set the region of workers to  Japan.
-- `Task Visibility`. I do not really understanding the purpose of this option. Usually keep it `Public` will suffice.
+- `Specify any additional qualifications Workers must meet to work on your tasks` provides creterions to filter out workers who do not meet. For example, sometimes we want our participants to be located in some contries. In our case, we can set the region of workers to  Japan.
+- `Task Visibility`. I do not really understand the purpose of this option. Usually keep it `Public` will suffice.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/dc63fd7b-3a0d-4aa9-9c0f-541253fa5da4">
 
 Finally, we can proceed to design the layout.
 
 #### Design Layout
-You will be presented by HTML codes, which defines the interface of the experiment.
-You can edit the content for you specific purpose.
+You will be presented with a template of HTML code, which defines the interface of the experiment.
 
-One thing that requires attention is how to load images in to this HTML.
-In the following figure, there is a tag called `crowd-image-classifier` in the red box.
+While you can edit the content for you specific purpose, one thing requiring attention is how to load images in to this HTML.
+In the code, there is a tag called `crowd-image-classifier` in the red box, as shown in the following figure.
 While it has four attributes, the `src` variable is crucial for loading images.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/2084a2fa-fcbd-485c-b32e-73b6f5456b8b">
 
-When publishing a batch of assignments, a csv file is required.
-In our case, the csv file contains a header called `image_url` followed by rows of urls of image, which looks like this:
+For image classification, when publishing a batch of assignments, a csv file is required to provide the urls to those images.
+As an example, our csv file contains a column named by `image_url`, followed by rows of an url of an image, which looks like this:
 
 | image_url |
 | --- |
@@ -137,16 +148,17 @@ In our case, the csv file contains a header called `image_url` followed by rows 
 | url of image 2 |
 | url of image 3 |
 
-In one assignment, each row in the csv will be iteratively loaded and processed, resulting in 3 HITs.
-In each HIT, the value of `src` defines where to find the url.
-In our example, `src="${image_url}"` means that it will take the values under the column `image_url`, with which the value of `src` will be filled.
-As a result, the `src` will contain one of the urls of image in the csv file.
-This tells the `crowd-image-classifier` which image to load for the classification.
+When creating HITs, one row will be used to create one HIT.
+If there are 3 rows excluding header, 3 HITs will be created in total.
+All HITs will be created using the same HTML code.
 
-By putting urls into the csv file, we can choose the images that will be used in the experiment.
-In addition, you can have multiple columns if you want.
-In that case, refer to their values using their column names by `${column_name}`.
+In the HTML code shown in the above figure, the value of `src` defines the url to image.
+`src="${image_url}"` means that `src` will take the value under the column named by `image_url` in the csv file.
+For our example csv file, when creating the first HIT, `url of image 1` will be filled to `src`, and when creating the second HIT, `url of image 2` will be filled to `src`, and so on.
 
+By changing or adding urls in the csv file, we can choose the images we want to classify.
+In addition, you can have multiple columns for loading other data if you want.
+You can refer to their url in the csv by `${YOUR_COLUMN_NAME}` in HTML.
 For advance usage, you can browse other project templates and read the comments in it.
 
 When finised, click on the `Preview` to proceed to the next step.
@@ -155,17 +167,17 @@ When finised, click on the `Preview` to proceed to the next step.
 
 #### Preview
 In the preview page, we can check if the page is rendered as intended.
-Ignore the warning `Failed to load the image` because we have not provided images for it.
+Ignore the warning `Failed to load the image` because we have not provided csv for it to load the images.
 
 You can click on the page to test each functionality.
 For example, cliking on instruction will show a window of instruction.
 These are connected to HTML elements in the source code.
-You can go back and modify the code if anything goes wrong.
+You can go back and modify the code if anything is wrong.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/02b79811-f736-464b-8e3a-5250023e4a05">
 
-One thing should be noted is that you can actually submit an answer in this preview and see what results you can get.
-Just select one option and click on the submit at the bottom right.
+You can submit an answer in this preview and see what results you can get.
+Select one option and click on the submit at the bottom right.
 
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/5e5b613e-6f4f-417a-8aaa-9117f7d2d99a">
 
@@ -175,16 +187,17 @@ Your answer will be shown on the top of the page.
 
 If everything is alright, click finish.
 
-### Publish Batch of Assignments
+### Publish Assignments
 #### Prepare csv file
 The format of the required csv file has been described in [Design Layout](#Design-Layout).
-[Here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. 
+[Here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose.
+You can download it and check its content to get a sense, or you can also make your own csv file.
 
-You can also make your own csv file.
-There should be numerous ways to assign an url to experiment materials, through which the data can be accessed from all over the world.
+As for the place to store the data, there should be numerous ways to assign an url to experiment materials, through which the data can be accessed from all over the world.
 In this tutorial, we show how to achieve this using AS3 in [AS3 as Data Storage](#AS3-as-Data-Storage).
+In the following, we assume a valid csv file has already been created.
 
-#### Publish Assignments
+#### Publish a Batch of Assignments
 After the csv file is prepared, click on `Publish Batch`.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/50317095-3e1e-4556-ba50-1757a5f964f5">
@@ -197,13 +210,13 @@ Upload the file.
 
 <img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e6729cb6-5bae-4ec8-8d83-a220230c76d3">
 
-Sandbox allows you to preview the task before actually publishing it.
+Sandbox allows you to preview the task before publishing it.
 Below shows some elements you may want to check:
 - Left upper corner shows the title.
-- `Reward` shows the reward to workers completed the assignment.
-- `Tasks Available` shows how many assignments are there for this experiment.
+- `Reward` shows the reward to workers who has completed an assignment. It is 0 as we set it to 0.
+- `Tasks Available` shows how many assignments are there that one worker can accept and complete. This is 3 as our csv files contain 3 images. Note that although we can publish multiple assignments for each HIT, which will result in assignments more than 3, each worker can only complete one set of HITs, which is 3. So this number should be equal to the number of rows in the csv file.
 - `Duration` shows the time limitation for completing the assignment.
-- `Showing Task 1 of 3` shows how many HITs are there in one assignment.
+- `Showing Task 1 of 3` shows the progress of HITs.
 - `Next HIT` in our case is used to go to next image, i.e., the next row in the uploaded csv file.
 - `Qualifications Required`. The criterion we have set.
 
@@ -216,9 +229,9 @@ The `Cost Summary` can be ignored since we are in Sandbox.
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1a3bf401-8fc2-4c5e-9bee-486430fe5432">
 
 I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
-`Number of tasks in this batch` refer to how many HITs are there in each assignment, in our case it is 3.
-`Number of assignments per task` refer to the total number of assignments, because `task` here refers to HIT. In our case it is 1.
-As a result, `Total number of assignments in this batch` is the total number of HITs.
+`Number of tasks in this batch` refer to how many assignments are there that one worker can accept and complete, in our case it is 3.
+`Number of assignments per task` refer to the number of assignments we publish for each HIT, in our case it is 1.
+As a result, `Total number of assignments in this batch` is the total number of assignments, in our case `3 (assignments for one worker) * 1 (number of assignment per HIT) = 3`.
 
 Click on `Publish` to publish the assignments.
 
