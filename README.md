@@ -412,7 +412,7 @@ AS3 will show the results of uploading.
 
 Click `Close` on the right upper corner to go back to the bucket.
 
-### Make Public
+### Making Public
 
 By default, these files are not public.
 Although there is a link for each file, it is not available to access.
@@ -423,7 +423,7 @@ In order to make these files public, check the items and click on `Make public u
 Click on `Make public` in the next page.
 AS3 will show the results of making public.
 
-### Obtain Url
+### Obtaining Url
 
 Navigate to any uploaded file and click on the file name to view the object overview.
 The `Object URL` shows the url to access this specific object.
@@ -438,4 +438,39 @@ In fact, the url in AS3 preserves the directory structure in the uploaded folder
 This makes it easy for creating the csv file when we have multiple files.
 We can recursively obtain the full path to each file in the directory locally, and append them with the prefix of AS3 path, which in our case is `https://demonstration-20240529-1726.s3.ap-northeast-3.amazonaws.com/`.
 
-## Notes on Preparing Materials
+## Tips on Preparing Materials
+### Multiple Items in one HIT
+By publishing assignments, we will be charged by Amazon as the management fee.
+Therefore, we would like to keep the number of assignments as small as possible.
+
+The method would be including multiple items in one HIT.
+For example, in image classification, instead of classifying only one image in one HIT, we can put 10 images in one HIT.
+Therefore, if we have 100 images, 10 assignments would be sufficient rather than 100.
+This can significantly reduce the cost.
+
+However, this will results in less variation of workers.
+While for a between-subject design this must not be done, it is necessary for within-subjective design.
+
+### Including Attention Check Questions
+There are so many bots on AMT.
+There are also people who do not give responses carefully.
+These can significantly affect the analysis of data.
+
+It is common or even mandatory to include attention check questions to filter them out.
+Simple yet effective way is expected to achieve this.
+For example, in the image classification task, we can check some answers of a specific worker.
+If significant mistakes are being made frequently, we can remove the data, or reject the response on AMT.
+
+For comparison tasks, for example compare two generated audio which is natural, we can make one of them white noise.
+If someone chose the noise, we can filter out the response.
+Because a random guessing will be correct half of the time, we can use more attention check questions to lower its probability.
+For instance, 3 questions can lower the probablity to `1/8`, which I believe is sufficiently low.
+
+### Obtaining the Consent from Workers
+For acadamic research, it is mandatory to obtain consent from the participants before the experiment.
+There is a `return` button after the acceptance of an assignment.
+By clicking on it, the acceptance will be withdrawned, and the assignment will be republished.
+
+In the first page, we should describe the content of the experiment, and notify the workers that we will collect their answer for data analysis.
+If you want to collect personal information such as age and gender, you should mention it clearly.
+If they do not agree, they can click on `return` to withdraw the acceptance.
