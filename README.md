@@ -29,15 +29,15 @@ Finally, the experiment can be published through AMT, and we can wait for the re
 - [Test in Sandbox](#Test-in-Sandbox)
 - [Publishing Experiment in AMT](#Publishing-Experiment-in-AMT)
 - [AS3 as Data Storage](#AS3-as-Data-Storage)
-- [Notes on Preparing Materials](#Notes-on-Preparing-Materials)
+- [Tips on Preparing Materials](#Tips-on-Preparing-Materials)
 
 ## Preliminaries
 ### HIT and Assignment
 HIT and assignment are important concepts in AMT and will be frequently used throughout this tutorial.
-It is better to understanding their meaning in the context of AMT before proceeding.
+It is better to grab their meaning in the context of AMT before proceeding.
 
-In general, a HIT refers to the task that the workers will complete.
-Assignemnt swill be published onto AMT for workers to complete.
+In general, a HIT refers to the task that the workers on AMT (the participant to your experiment) will complete.
+Assignemnts are be published onto AMT for workers to complete.
 Usually, we will publish one assignment for each HIT to obtain one response for each HIT, but sometimes we want to collect more than one response for each HIT.
 In this case, we can publish multiple assignments for each HIT to obtain multiple responses for each HIT.
 These assignments will be assigned to different workers to ensure the responses are from different sources (theoretically).
@@ -477,6 +477,7 @@ If they do not agree, they can click on `return` to withdraw the acceptance.
 
 ## Contact
 My email: wu.bowen.dp@gmail.com
+
 Feel free to open an issue for anything.
 
 
