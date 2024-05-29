@@ -171,11 +171,12 @@ If everything is alright, click finish.
 
 ### Publish Batch of Assignments
 #### Prepare csv file
-The format of the required csv file has been described in [Design Layout](#Design-Layout), [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. 
+The format of the required csv file has been described in [Design Layout](#Design-Layout).
+[Here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. 
 
 You can also make your own csv file.
 There should be numerous ways to assign an url to experiment materials, through which the data can be accessed from all over the world.
-In this tutorial, we show how to achieve this using A3 in [AS3 as Data Storage](#AS3-as-Data-Storage).
+In this tutorial, we show how to achieve this using AS3 in [AS3 as Data Storage](#AS3-as-Data-Storage).
 
 #### Publish Assignments
 After the csv file is prepared, click on `Publish Batch`.
