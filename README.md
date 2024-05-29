@@ -28,6 +28,7 @@ Finally, the experiment can be published through AMT, and we can wait for the re
 - [Creation of AWS Account](#Creation-of-AWS-Account)
 - [Test in Sandbox](#Test-in-Sandbox)
 - [Publishing Experiment in AMT](#Publishing-Experiment-in-AMT)
+- [AS3 as Data Storage](#AS3-as-Data-Storage)
 - [Notes on Preparing Materials](#Notes-on-Preparing-Materials)
 
 ## Preliminaries
@@ -43,7 +44,7 @@ For example, if the experiment has 10 images in total for one participant to cla
 
 Therefore, if we publish 3 assignments, 3 particpants will take part in the experiment, each of them will classify all 10 images in one experiment. As a result, we will receive 30 HITs in total, 3 HITs for each image.
 
-For a more information, please refer to [here](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd).
+For more information on this topic, please refer to [here](https://blog.mturk.com/tutorial-understanding-hits-and-assignments-d2be35102fbd).
 
 ## Creation of AWS Account
 You probably will not need to use your own account. 
@@ -88,9 +89,9 @@ A banner will be on the top of the page as an indication.
 If you are not in the ATM-Sandbox, navigate to [AMT-Sandbox](https://requester.mturk.com/developer/sandbox) and sign in  using the account just created.
 
 ### Creat Sandbox Project
-#### Enter Properties
 We will take Image Classification as an example to show how a Sandbox project can be created.
 
+#### Enter Properties
 Click on `Create` tag, and select Image Classifcation in Vision category, fianally click on `Create Project`.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/7cf7097f-cf80-40f0-a8b4-0382f3c8eb8c">
@@ -123,6 +124,7 @@ While it has four attributes, the `src` variable is crucial for loading images.
 
 When publishing a batch of assignments, a csv file is required.
 In our case, the csv file contains a header called `image_url` followed by rows of urls of image, which looks like this:
+
 | image_url |
 | --- |
 | url of image 1 |
@@ -169,7 +171,11 @@ If everything is alright, click finish.
 
 ### Publish Batch of Assignments
 #### Prepare csv file
-The format of the required csv file has been described in [Design Layout](#Design-Layout), [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. Or you can make your own one.
+The format of the required csv file has been described in [Design Layout](#Design-Layout), [here](https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/files/15466602/input.csv) is a template csv file I created for demonstration purpose. Download it and check its content to get a sense. 
+
+You can also make your own csv file.
+There should be numerous ways to assign an url to experiment materials, through which the data can be accessed from all over the world.
+In this tutorial, we show how to achieve this using A3 in [AS3 as Data Storage](#AS3-as-Data-Storage).
 
 #### Publish Assignments
 After the csv file is prepared, click on `Publish Batch`.
@@ -198,21 +204,20 @@ Below shows some elements you may want to check:
 
 Check the information of the batch.
 You can change the `Batch Name` for management of your batches.
-
-I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
-`Number of tasks in this batch` should refer to how many HITs are there in each assignment, in our case it is 3.
-`Number of assignments per task` should refer to the total number of assignments, because `task` here refers to HIT. In our case it is 1.
-As a result, `Total number of assignments in this batch` should be the total number of HITs.
-
 The `Cost Summary` can be ignored since we are in Sandbox.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/1a3bf401-8fc2-4c5e-9bee-486430fe5432">
+
+I feel that more explanation is needed for `Tasks` as the description is not so comprehensive.
+`Number of tasks in this batch` refer to how many HITs are there in each assignment, in our case it is 3.
+`Number of assignments per task` refer to the total number of assignments, because `task` here refers to HIT. In our case it is 1.
+As a result, `Total number of assignments in this batch` is the total number of HITs.
 
 Click on `Publish` to publish the assignments.
 
 Immediately, the page should be redirected to batch details, where you can check status of the batch, and view the results.
 - `Assignments Completed` shows the progress.
-- `Cancel` can terminate the publishing of assignments. However, assignments that have been already accepted by workers will not be terminated.
+- `Cancel` can terminate the publishing of assignments. However, assignments that have already been accepted by workers will not be terminated.
 - `Results` is where we can check the received responses of workers.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/51669560-5347-443e-abe6-da87f9a3d862">
@@ -222,8 +227,8 @@ Immediately, the page should be redirected to batch details, where you can check
 Navigate to [AMT-Sandbox for worker](https://workersandbox.mturk.com/), login use your Amazon account.
 
 In order to be a worker, an Amazon account for AMT worker needs to be registered.
-If you failed to login, create your Amazon account first.
-You can use the email used to create the AWS account.
+Create your Amazon account first if you do not have one.
+You can use the email used to create the AWS account for the registeration.
 
 <img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/47af8313-d705-4ff9-94cf-c4718633dbe1">
 
@@ -233,8 +238,6 @@ If there is no one, navigate to [AMT-Sandbox for worker](https://workersandbox.m
 <img width="400" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/f89ee4ad-5f76-4d50-af9b-4657b97a97bd">
 
 In Worker Registeration, input necessary information and click on `Create Account`.
-
-<img width="200" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/0c476d5a-f171-4908-be4f-fb9e601b55b8">
 
 #### Browsing Published Assignments
 Because we want to complete the assingment published by ourself, we can search for it by inputting the title. In our case, it would be `WuBowen-20240528-1553`. The search results are shown below.
@@ -251,6 +254,9 @@ Then you can submit your answer to complete the assignment.
 Select one category and submit the answer.
 
 <img width="600" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/d580233a-126d-405d-ba2f-4f4c605da0bf">
+
+If there are multiple HITs, you need to accept each of them before complete it.
+Checking the `Auto-accept next HIT` can improve the efficiency.
 
 #### Notes
 - It seems that one AWS account can only accept the HIT once. In order to complete multiple assignments, prepare multiple AMT worker accounts in advance.
@@ -274,7 +280,7 @@ This is necessary as there will be bots or people that give low-quality answers 
 By approving HITs, you give permission to reward the worker.
 If you reject them, they will not be paid, and AMT will automatically publish a new assignment.
 
-By downloading the csv, and mark "x" under a column titled "Approve" or putting your reject comment under a column title "Reject", you can do this offline.
+By downloading the csv, and mark "x" under a column titled "Approve" or putting your reject comment under  a column title "Reject", you can do this offline.
 
 <img width="500" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/8cbbe96d-63c4-401f-a159-2fc4395d6839">
 
@@ -283,5 +289,7 @@ Afterwards, you can upload this edited csv to AMT for this purpose.
 <img width="300" alt="image" src="https://github.com/BowenWuResearch/Amazon-Mechanical-Turk-Subjective-Experiment-Tutorial/assets/170743218/e544678f-b832-44cf-8f95-503d7b9973c6">
 
 ## Publishing Experiment in AMT
+
+## AS3 as Data Storage
 
 ## Notes on Preparing Materials
